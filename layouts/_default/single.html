@@ -16,4 +16,7 @@
 <content>
   {{ .Content }}
 </content>
+{{ if eq .Type "blog" }}
+<p class="back-home"><a href="{{ "" | relLangURL }}">← {{ .Site.Title }}</a></p>
+{{ end }}
 {{ end }}

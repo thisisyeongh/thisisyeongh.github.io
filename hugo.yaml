@@ -18,10 +18,11 @@ permalinks:
   blog: /:slug/
 
 params:
-  description: "Software Engineer · KAIST CS. Notes on debugging production systems."
+  description: "Software engineer working on a GPU cloud. KAIST CS."
   title: Yeongh
   dateFormat: "2006-01-02"
   enablePostNavigator: false
+  hideMadeWithLine: true
 
 menu:
   main:

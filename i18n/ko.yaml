@@ -1,0 +1,8 @@
+writing: 글
+series: 시리즈
+parts: 편
+nothing_yet: 아직 올린 글이 없습니다.
+min_read: "{{ .Count }}분 분량"
+contents: 목차
+part_of: "{{ .total }}편 중 {{ .part }}편 ·"
+all_posts: "전체 글 →"

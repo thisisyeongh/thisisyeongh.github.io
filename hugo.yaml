@@ -43,7 +43,7 @@ languages:
     weight: 2
     menu:
       main:
-        - name: Blog
+        - name: 글
           url: /ko/blog/
           weight: 20
 

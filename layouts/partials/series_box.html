@@ -2,7 +2,7 @@
 {{- $term := . }}
 {{- $parts := sort $term.Pages "Params.part" }}
 <div class="series-box">
-  Part {{ $.Params.part }} of {{ len $parts }} in <a href="{{ $term.Permalink }}">{{ $term.LinkTitle }}</a>
+  {{ i18n "part_of" (dict "part" $.Params.part "total" (len $parts)) }} <a href="{{ $term.Permalink }}">{{ $term.LinkTitle }}</a>
   <ol>
     {{- range $parts }}
     {{- if eq .Permalink $.Permalink }}

@@ -6,7 +6,7 @@
     {{- range .Pages }}
     <li>
       <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      <time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format "Jan 2" }}</time>
+      <time datetime='{{ .Date.Format "2006-01-02" }}'>{{ cond (eq site.Language.Lang "ko") (.Date.Format "1월 2일") (.Date.Format "Jan 2") }}</time>
     </li>
     {{- end }}
   </ul>

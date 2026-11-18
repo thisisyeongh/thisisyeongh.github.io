@@ -1,0 +1,8 @@
+writing: Writing
+series: Series
+parts: parts
+nothing_yet: Nothing published yet.
+min_read: "{{ .Count }} min read"
+contents: Contents
+part_of: "Part {{ .part }} of {{ .total }} in"
+all_posts: "All posts →"

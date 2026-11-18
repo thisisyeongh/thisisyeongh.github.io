@@ -2,13 +2,13 @@
 {{ if eq .Type "blog" }}
 <h1>{{ .Title }}</h1>
 <p class="post-meta">
-  <time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format "Jan 2, 2006" }}</time>
-  · {{ .ReadingTime }} min read
+  <time datetime='{{ .Date.Format "2006-01-02" }}'>{{ cond (eq .Site.Language.Lang "ko") (.Date.Format "2006년 1월 2일") (.Date.Format "Jan 2, 2006") }}</time>
+  · {{ i18n "min_read" (dict "Count" .ReadingTime) }}
 </p>
 {{ partial "series_box.html" . }}
 {{ if and .Params.toc (gt (len .TableOfContents) 32) }}
 <details class="toc">
-  <summary>Contents</summary>
+  <summary>{{ i18n "contents" }}</summary>
   {{ .TableOfContents }}
 </details>
 {{ end }}

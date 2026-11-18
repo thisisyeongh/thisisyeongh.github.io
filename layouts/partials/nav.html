@@ -1,0 +1,8 @@
+{{ range .Site.Menus.main }}
+<a href="{{ .URL }}">{{ .Name }}</a>
+{{ end }}
+{{- /* Always show the other language: its version of this page if one exists, otherwise its home. */}}
+{{- $targets := cond .IsTranslated .Translations .Site.Home.Translations }}
+{{- range $targets }}
+<a href="{{ .RelPermalink }}" lang="{{ .Language.Locale }}" hreflang="{{ .Language.Locale }}" class="lang-switch">{{ .Language.Label }}</a>
+{{- end }}

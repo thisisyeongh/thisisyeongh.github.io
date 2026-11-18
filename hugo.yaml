@@ -1,5 +1,4 @@
 baseURL: https://thisisyeongh.github.io/
-locale: en-us
 title: Yeongh
 author: Yeongh
 theme: hugo-bearblog
@@ -24,14 +23,35 @@ params:
   enablePostNavigator: false
   hideMadeWithLine: true
 
-menu:
-  main:
-    - name: Home
-      url: /
-      weight: 10
-    - name: Blog
-      url: /blog/
-      weight: 20
+# English is the default at /, Korean lives under /ko/.
+# A language link appears only on pages that have a translation (index.ko.md).
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+languages:
+  en:
+    locale: en-us
+    label: English
+    weight: 1
+    menu:
+      main:
+        - name: Home
+          url: /
+          weight: 10
+        - name: Blog
+          url: /blog/
+          weight: 20
+  ko:
+    locale: ko-kr
+    label: 한국어
+    weight: 2
+    menu:
+      main:
+        - name: Home
+          url: /ko/
+          weight: 10
+        - name: Blog
+          url: /ko/blog/
+          weight: 20
 
 markup:
   highlight:

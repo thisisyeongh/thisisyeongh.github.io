@@ -1,5 +1,5 @@
 ---
-title: Yeonghun Jung
+title: 정영훈
 ---
 
 GPU 클라우드를 만드는 소프트웨어 엔지니어. KAIST CS.

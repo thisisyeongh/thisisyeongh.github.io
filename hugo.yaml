@@ -40,6 +40,10 @@ languages:
   ko:
     locale: ko-kr
     label: 한국어
+    title: 정영훈
+    params:
+      author: 정영훈
+      title: 정영훈
     weight: 2
     menu:
       main:

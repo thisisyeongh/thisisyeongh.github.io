@@ -1,6 +1,6 @@
 baseURL: https://thisisyeongh.github.io/
-title: Yeongh
-author: Yeongh
+title: Yeonghun Jung
+author: Yeonghun Jung
 theme: hugo-bearblog
 
 enableRobotsTXT: true
@@ -18,7 +18,7 @@ permalinks:
 
 params:
   description: "Software engineer working on a GPU cloud. KAIST CS."
-  title: Yeongh
+  title: Yeonghun Jung
   dateFormat: "2006-01-02"
   enablePostNavigator: false
   hideMadeWithLine: true
@@ -34,9 +34,6 @@ languages:
     weight: 1
     menu:
       main:
-        - name: Home
-          url: /
-          weight: 10
         - name: Blog
           url: /blog/
           weight: 20
@@ -46,9 +43,6 @@ languages:
     weight: 2
     menu:
       main:
-        - name: Home
-          url: /ko/
-          weight: 10
         - name: Blog
           url: /ko/blog/
           weight: 20

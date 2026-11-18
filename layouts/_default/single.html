@@ -2,7 +2,7 @@
 {{ if eq .Type "blog" }}
 <h1>{{ .Title }}</h1>
 <p class="post-meta">
-  <time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format (default "2006-01-02" .Site.Params.dateFormat) }}</time>
+  <time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format "Jan 2, 2006" }}</time>
   · {{ .ReadingTime }} min read
 </p>
 {{ partial "series_box.html" . }}

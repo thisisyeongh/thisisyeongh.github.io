@@ -1,0 +1,5 @@
+{{ define "main" }}
+<h1 class="page-title">{{ .Title }}</h1>
+{{ .Content }}
+{{ with .Pages }}{{ partial "post_list.html" . }}{{ else }}<p class="muted">Nothing published yet.</p>{{ end }}
+{{ end }}

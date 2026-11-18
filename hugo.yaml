@@ -1,0 +1,50 @@
+baseURL: https://thisisyeongh.github.io/
+locale: en-us
+title: Yeongh
+author: Yeongh
+theme: hugo-bearblog
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+
+# Series only. Posts also carry `topics` in front matter, not rendered yet.
+taxonomies:
+  series: series
+disableKinds: [taxonomy]
+ignoreErrors: [error-disable-taxonomy]
+
+permalinks:
+  blog: /:slug/
+
+params:
+  description: "Software Engineer · KAIST CS. Notes on debugging production systems."
+  title: Yeongh
+  dateFormat: "2006-01-02"
+  enablePostNavigator: false
+
+menu:
+  main:
+    - name: Home
+      url: /
+      weight: 10
+    - name: Blog
+      url: /blog/
+      weight: 20
+
+markup:
+  highlight:
+    noClasses: false
+    lineNos: false
+    codeFences: true
+    guessSyntax: false
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
+  goldmark:
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          block: [['\[', '\]'], ['$$', '$$']]
+          inline: [['\(', '\)']]

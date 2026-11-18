@@ -1,0 +1,16 @@
+{{- with .GetTerms "series" }}{{ with index . 0 }}
+{{- $term := . }}
+{{- $parts := sort $term.Pages "Params.part" }}
+<div class="series-box">
+  Part {{ $.Params.part }} of {{ len $parts }} in <a href="{{ $term.Permalink }}">{{ $term.LinkTitle }}</a>
+  <ol>
+    {{- range $parts }}
+    {{- if eq .Permalink $.Permalink }}
+    <li class="current">{{ .Title }}</li>
+    {{- else }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{- end }}
+    {{- end }}
+  </ol>
+</div>
+{{- end }}{{ end }}

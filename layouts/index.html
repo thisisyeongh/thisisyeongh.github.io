@@ -1,0 +1,28 @@
+{{ define "main" }}
+{{ .Content }}
+
+{{ with .Site.Taxonomies.series }}
+<section class="home-section">
+  <h3>Series</h3>
+  <ul class="series-list">
+    {{ range . }}
+    <li><a href="{{ .Page.Permalink }}">{{ .Page.LinkTitle }}</a> <small>{{ .Count }} parts</small></li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}
+
+<section class="home-section">
+  <h3>Posts</h3>
+  <ul class="blog-posts">
+    {{ range where .Site.RegularPages "Section" "blog" }}
+    <li>
+      <span><time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format "2006-01-02" }}</time></span>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </li>
+    {{ else }}
+    <li>Nothing published yet.</li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}

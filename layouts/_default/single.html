@@ -1,0 +1,19 @@
+{{ define "main" }}
+{{ if eq .Type "blog" }}
+<h1>{{ .Title }}</h1>
+<p class="post-meta">
+  <time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format (default "2006-01-02" .Site.Params.dateFormat) }}</time>
+  · {{ .ReadingTime }} min read
+</p>
+{{ partial "series_box.html" . }}
+{{ if and .Params.toc (gt (len .TableOfContents) 32) }}
+<details class="toc">
+  <summary>Contents</summary>
+  {{ .TableOfContents }}
+</details>
+{{ end }}
+{{ end }}
+<content>
+  {{ .Content }}
+</content>
+{{ end }}
